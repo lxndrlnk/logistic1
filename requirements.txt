@@ -61,5 +61,6 @@ tzdata==2023.4
 tzlocal==5.2
 urllib3==2.1.0
 validators==0.22.0
+XlsxWriter==3.1.9
 xyzservices==2023.10.1
 zipp==3.17.0

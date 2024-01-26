@@ -609,10 +609,10 @@ def main():
 
         RADIUS = st.number_input("Радиус домашней области (км)", min_value=1, value=20, step=1)
         num_clusters_outside_EKT_MIN = st.number_input("Мин. количество кластеров за пределами домашней области", min_value=1, value=5, step=1)
-        num_clusters_outside_EKT_MAX = st.number_input("Макс. количество кластеров за пределами домашней области", min_value=1, value=10, step=1)
+        num_clusters_outside_EKT_MAX = st.number_input("Макс. количество кластеров за пределами домашней области", min_value=1, value=5, step=1)
         max_delivery_points_per_route_outside = st.number_input("Макс. количество точек доставки для одного маршрута за пределами домашней области", min_value=1, value=100, step=1)
         num_clusters_EKT_MIN = st.number_input("Мин. количество кластеров в домашней области", min_value=1, value=3, step=1)
-        num_clusters_EKT_MAX = st.number_input("Макс. количество кластеров в домашней области", min_value=1, value=7, step=1)
+        num_clusters_EKT_MAX = st.number_input("Макс. количество кластеров в домашней области", min_value=1, value=3, step=1)
         max_delivery_points_per_route_city = st.number_input("Макс. количество точек доставки для одного маршрута в домашней области", min_value=1, value=15, step=1)
 
         # Кнопка отправки формы

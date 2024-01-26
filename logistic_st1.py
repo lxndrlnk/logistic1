@@ -837,11 +837,7 @@ def main():
                                         data.append(row)
 
                     df = pd.DataFrame(data, columns=columns)
-                    
-                    # Формирование имени файла с текущей датой и временем
-                    current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-                    output_file_path = f'delivery_points_sorted_{current_time}.xlsx'
-                    
+                                   
                     # Создаем строку "Суммарная длина маршрутов" и добавляем None для всех остальных столбцов
                     total_route_length_row = ["Суммарная длина маршрутов (метры)"] + [None] * (len(columns) - 2)
 
@@ -854,9 +850,10 @@ def main():
                     output = io.BytesIO()
                     with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
                         df.to_excel(writer, index=False)
-                        writer.save()
+                        #writer.save()
                     output.seek(0)
                     return output
+
 
                 def plot_graph_boundaries_with_points(delivery_points_manager, radius_km):
                     """
